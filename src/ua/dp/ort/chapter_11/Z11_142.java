@@ -7,17 +7,18 @@ public class Z11_142 {
 		System.out.println("Задание № 142");
 		float min = 0;
 		int minNumber = 0;
-		float[] result = new float[23];			//исходный массив
-		float[] copyResult = new float[23];		
+		final int numberSpotsmen = 23;
+		float[] result = new float[numberSpotsmen];			//исходный массив
+		float[] copyResult = new float[numberSpotsmen];		
 		int[] minResult = new int[4];			//массив с номерами лучших спортсменов
-		for (int i = 0; i < 23; i++) {
+		for (int i = 0; i < numberSpotsmen; i++) {
 			result[i] = (float)((Math.random() * 5) + 10);
 			copyResult[i] = result[i];
 		}
-		System.out.println("Результаты соревнований 23 спортсменов:\n" 
+		System.out.println("Результаты соревнований " + numberSpotsmen + " спортсменов:\n" 
 		+ Arrays.toString(result));
 		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 22; j++) {
+			for (int j = 0; j < numberSpotsmen - 1; j++) {
 				if (j > 0 && copyResult[j] <= min && copyResult[j] != 0) {
 					min = copyResult[j];		
 					minNumber = j;
