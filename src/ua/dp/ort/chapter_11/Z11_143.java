@@ -9,7 +9,7 @@ public class Z11_143 {
 		int[] arrayMaxMod = new int[lenght];
 		int[] reArrayMaxMod = new int[lenght];
 		int maxMod = 0;
-		for (int i = 0; i < lenght; i++) {
+		for (int i = 0; i < arrayMaxMod.length; i++) {
 			int sign = Math.random() > 0.5 ? 1 : -1;  //определение знака элемента
 			arrayMaxMod[i] = (int)((Math.random() * 100 + 1) * sign);
 			reArrayMaxMod[i] = arrayMaxMod[i];
@@ -19,7 +19,7 @@ public class Z11_143 {
 				maxMod = Math.abs(arrayMaxMod[0]);
 			}
 		}
-		for (int i = 0; i < lenght; i++) {
+		for (int i = 0; i < reArrayMaxMod.length; i++) {
 			if (Math.abs(reArrayMaxMod[i]) == maxMod) {
 				reArrayMaxMod[i] = -reArrayMaxMod[i];
 			}
