@@ -18,6 +18,17 @@ public class Z09_157 {
 		word2 = word2.toLowerCase();
 		
 		//замена повторяющихся символов в первом слове на "-1"
+		int[] doubleWord = changeDoubleSymbol(word1);
+		
+		System.out.println("Содержится ли каждая буква первого слова "
+				+ "во втором слове?");
+		
+		//собственно, проверка основного условия задачи
+		doubleTrueFalse(word1, word2, doubleWord);
+		s.close();
+	}
+
+	private static int[] changeDoubleSymbol(String word1) {
 		int[] doubleWord = new int[word1.length()];
 		for (int i = 0; i < word1.length(); ++i) {
 			for (int j = 1 + i; j < word1.length(); ++j) {
@@ -26,10 +37,10 @@ public class Z09_157 {
 				}
 			}
 		}
-		System.out.println("Содержится ли каждая буква первого слова "
-				+ "во втором слове?");
-		
-		//собственно, проверка основного условия задачи
+		return doubleWord;
+	}
+
+	private static void doubleTrueFalse(String word1, String word2, int[] doubleWord) {
 		boolean temp = false;
 		for (int i = 0; i < word1.length(); ++i) {
 			for (int j = 0; j < word2.length(); ++j) {
@@ -45,6 +56,5 @@ public class Z09_157 {
 			}
 			temp = false;
 		}
-		s.close();
 	}
 }
