@@ -3,31 +3,25 @@ package ua.dp.ort.chapter_OOP_04;
 public class Stringch {
 	private Character[] _simbol; 
 	private int _length;
-	private final static int defaultLength = 30;
+	private final static int DEFAULT_LENGTH = 30;
 		
 	/**
 	 * Создает пустую строку с длиной по умолчанию
 	 * 
 	 */
 	public Stringch() {
-		setDefaultArray(defaultLength);
+		_simbol = new Character[DEFAULT_LENGTH];
+		_length = DEFAULT_LENGTH;
 	}
 	
 	/**
-	 * Создает строку на заданное количество элементов со случайными значениями
-	 * @param length - количество элементов
+	 * Принимает массив char'ов, который фактически является 
+	 * внутренним форматом класса Stringch  
+	 * @param simbol - массив char'ов
 	 */
-	public Stringch(int length) {
-		setLengthArray(length);
-	}
-	
-	public void setLengthArray(int length) {
-		_simbol = new Character[length];
-		_length = length;
-		for (int i = 0; i < length; ++i) {
-			_simbol[i] = (char)((int)(Math.random() * 127) + 21);
-		}
-		
+	public Stringch(Character[] simbol) {
+		_simbol = simbol;
+		_length = simbol.length;
 	}
 
 	/**
@@ -44,11 +38,6 @@ public class Stringch {
 			_simbol[i] = wordInput.charAt(i);
 		}
 		_length = wordInput.length();
-	}
-	
-	public void setDefaultArray(int defaultLength) {
-		_simbol = new Character[defaultLength];
-		_length = defaultLength;
 	}
 	
 	/**
@@ -74,17 +63,16 @@ public class Stringch {
 	 * @param simbol - заменяемый символ
 	 * @param index - индекс заменяемого символа
 	 */
-	public void changeStringch(Stringch array, char simbol, int index) {
-		_length = array._length;
-		for (int i = 0; i < array._length; ++i) {
-			if (index >= array._length) {
+	public void changeStringch(char simbol, int index) {
+		for (int i = 0; i < this._length; ++i) {
+			if (index >= this._length) {
 				System.err.println("Неверный индекс символа для замены");
 				return;
 			}
 			if (i == index) {
 				_simbol[i] = simbol;
 			}
-			_simbol[i] = array._simbol[i];
+			_simbol[i] = this._simbol[i];
 		}
 	}
 	
@@ -93,15 +81,15 @@ public class Stringch {
 	 * @param array - исходная строка
 	 * @param numberSymbol - количество удаляемых элементов
 	 */
-	public void deleteStringchEnd(Stringch array, int numberSymbol) {
-		if (numberSymbol >= array._length) {
+	public void deleteStringchEnd(int numberSymbol) {
+		if (numberSymbol >= this._length) {
 			System.err.println("Неверное число удаляемых элементов");
 			_simbol = null;
 			_length = 0;
 		} else {
-			_length = array._length - numberSymbol;
+			_length = this._length - numberSymbol;
 			for (int i = 0; i < _length; ++i) {
-				_simbol[i] = array._simbol[i]; 
+				_simbol[i] = this._simbol[i]; 
 			}
 		}
 	}
