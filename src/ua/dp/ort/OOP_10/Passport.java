@@ -1,7 +1,7 @@
 package ua.dp.ort.OOP_10;
 
 /**
- * Класс представляет собой данные паспорта Украины
+ * This class is a passport of Ukraine
  * @author Admin
  *
  */
@@ -15,20 +15,20 @@ public class Passport {
 	private String _dateOfIssue;
 	
 	/**
-	 * инициализация класса без параметров
+	 * constructor without parameters
 	 */
 	public Passport () {
 	}
 	
 	/**
-	 * инициализация класса с параметрами:
-	 * @param surname - фамилия
-	 * @param name - имя
-	 * @param patronymic - отчество
-	 * @param dateOfBirth - дата рождения
-	 * @param placeOfBirth - место рождения
-	 * @param numberPassport - номер паспорта
-	 * @param dateOfIssue - дата выдачи
+	 * constructor with parameters
+	 * @param surname - holder's surname
+	 * @param name - holder's name
+	 * @param patronymic - holder's patronymic
+	 * @param dateOfBirth - holder's date of birth
+	 * @param placeOfBirth - holder's place of birth
+	 * @param numberPassport - number of passport
+	 * @param dateOfIssue - passport issuing date
 	 */
 	public Passport (String surname, 
 			String name, 
@@ -46,99 +46,99 @@ public class Passport {
 		setDateOfIssue(dateOfIssue);
 	}
 	/**
-	 * возвращение параметра
-	 * @return фамилия
+	 * Getter
+	 * @return - holder's surname
 	 */
 	public String getSurname() {
 		return _surname;
 	}
 	/**
-	 * установка параметра
-	 * @param surname - фамилия
+	 * Setter
+	 * @param set holder's surname
 	 */
 	public void setSurname(String surname) {
 		_surname = surname;
 	}
 	/**
-	 * возвращение параметра
-	 * @return имя
+	 * Getter
+	 * @return - holder's name
 	 */
 	public String getName() {
 		return _name;
 	}
 	/**
-	 * установка параметра
-	 * @param name - имя
+	 * Setter
+	 * @param set holder's name
 	 */
 	public void setName(String name) {
 		_name = name;
 	}
 	/**
-	 * возвращение параметра
-	 * @return отчество
+	 * Getter
+	 * @return - holder's patronymic
 	 */
 	public String getPatronymic() {
 		return _patronymic;
 	}
 	/**
-	 * установка параметра
-	 * @param patronymic - отчество
+	 * Setter
+	 * @param set holder's patronymic
 	 */
 	public void setPatronymic(String patronymic) {
 		_patronymic = patronymic;
 	}
 	/**
-	 * возвращение параметра
-	 * @return дата рождения
+	 * Getter
+	 * @return - holder's date of birth
 	 */
 	public String getDateOfBirth() {
 		return _dateOfBirth;
 	}
 	/**
-	 * установка параметра
-	 * @param dateOfBirth - дата рождения
+	 * Setter
+	 * @param set holder's date of birth
 	 */
 	public void setDateOfBirth(String dateOfBirth) {
 		_dateOfBirth = dateOfBirth;
 	}
 	/**
-	 * возвращение параметра
-	 * @return место рождения
+	 * Getter
+	 * @return - holder's place of birth
 	 */
 	public String getPlaceOfBirth() {
 		return _placeOfBirth;
 	}
 	/**
-	 * установка параметра
-	 * @param placeOfBirth - место рождения
+	 * Setter
+	 * @param set holder's place of birth
 	 */
 	public void setPlaceOfBirth(String placeOfBirth) {
 		_placeOfBirth = placeOfBirth;
 	}
 	/**
-	 * возвращение параметра
-	 * @return номер паспорта
+	 * Getter
+	 * @return - number of passport
 	 */
 	public String getNumberPassport() {
 		return _numberPassport;
 	}
 	/**
-	 * установка параметра
-	 * @param numberPassport - номер паспорта
+	 * Setter
+	 * @param set number of passport
 	 */
 	public void setNumberPassport(String numberPassport) {
 		_numberPassport = numberPassport;
 	}
 	/**
-	 * возвращение параметра
-	 * @return дата выдачи
+	 * Getter
+	 * @return - passport issuing date
 	 */
 	public String getDateOfIssue() {
 		return _dateOfIssue;
 	}
 	/**
-	 * установка параметра
-	 * @param dateOfIssue - дата выдачи
+	 * Setter
+	 * @param set passport issuing date
 	 */
 	public void setDateOfIssue(String dateOfIssue) {
 		_dateOfIssue = dateOfIssue;

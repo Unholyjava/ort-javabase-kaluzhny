@@ -1,146 +1,71 @@
 package ua.dp.ort.OOP_10;
 
 /**
- * Класс представляет собой данные загранпаспорта Украины
- * и является расширением класса данных гражданского
- * паспорта Украины - класса Passport.
+ * This class is a foreign passport of Ukraine
+ * and it is an extension class Passport
+ * Class contains fields which are other classes  
  * @author Admin
  *
  */
 public class ForeignPassport extends Passport {
 	private Visa _visaData;
-	private String _dateOfExpiry;
-	private String _nationality;
-	private String _countryCode;
-	private String _recordNo;
-	private String _authority;
-	
+	private ForeignPassportForei _foreignPassportForei;
+		
 	/**
-	 * инициализация класса без параметров
+	 * constructor without parameters
 	 */
 	public ForeignPassport() {
 	}
 	
 	/**
-	 * инициализация класса с параметрами
-	 * @param surname - фамилия
-	 * @param name - имя
-	 * @param patronymic - отчество
-	 * @param dateOfBirth - дата рождения
-	 * @param placeOfBirth - место рождения
-	 * @param numberPassport - номер паспорта
-	 * @param dateOfIssue - дата выдачи
-	 * @param visaData - типы визы
-	 * @param dateOfExpiry - дата окончания срока действия паспорта
-	 * @param nationality - гражданство
-	 * @param countryCode - код страны, выдавшей паспорт
-	 * @param recordNo - запись в реестре
-	 * @param authority - организация, выдавшая паспорт
+	 * constructor with parameters
+	 * @param passport - data of passport
+	 * @param visaData - data of visa
+	 * @param foreignPassportForei - other data of foreign passport
 	 */
-	public ForeignPassport(String surname, 
-			String name, 
-			String patronymic,
-			String dateOfBirth,
-			String placeOfBirth,
-			String numberPassport,
-			String dateOfIssue,
-			Visa visaData,
-			String dateOfExpiry,
-			String nationality,
-			String countryCode,
-			String recordNo,
-			String authority) {
-		super (surname, name, patronymic, dateOfBirth, placeOfBirth,
-				numberPassport, dateOfIssue);
+	public ForeignPassport(
+		Passport passport,
+		Visa visaData,
+		ForeignPassportForei foreignPassportForei) {
+		super(passport.getSurname(), passport.getName(), 
+			passport.getPatronymic(), passport.getDateOfBirth(), 
+			passport.getPlaceOfBirth(), passport.getNumberPassport(), 
+			passport.getDateOfIssue());
 		setVisaData(visaData);
-		setDateOfExpiry(dateOfExpiry);
-		setNationality(nationality);
-		setCountryCode(countryCode);
-		setRecordNo(recordNo);
-		setAuthority(authority);
+		setForeignPassportForei(foreignPassportForei);
+		
 	}
+	
 	/**
-	 * возвращение параметра
-	 * @return типы визы
+	 * Getter
+	 * @return data of visa
 	 */
 	public Visa getVisaData() {
 		return _visaData;
 	}
 	/**
-	 * установка параметра
-	 * @param visaData - типы визы
+	 * Setter
+	 * @param visaData - set data of visa
 	 */
 	public void setVisaData(Visa visaData) {
 		_visaData = visaData;
 	}
+
 	/**
-	 * возвращение параметра
-	 * @return дата окончания срока действия паспорта
+	 * Getter
+	 * @return - other data of foreign passport
 	 */
-	public String getDateOfExpiry() {
-		return _dateOfExpiry;
+	public ForeignPassportForei getForeignPassportForei() {
+		return _foreignPassportForei;
 	}
+
 	/**
-	 * установка параметра
-	 * @param dateOfExpiry - дата окончания срока действия паспорта
+	 * Setter
+	 * @param set other data of foreign passport
 	 */
-	public void setDateOfExpiry(String dateOfExpiry) {
-		_dateOfExpiry = dateOfExpiry;
+	public void setForeignPassportForei(ForeignPassportForei foreignPassportForei) {
+		_foreignPassportForei = foreignPassportForei;
 	}
-	/**
-	 * возвращение параметра
-	 * @return гражданство
-	 */
-	public String getNationality() {
-		return _nationality;
-	}
-	/**
-	 * установка параметра
-	 * @param nationality - гражданство
-	 */
-	public void setNationality(String nationality) {
-		_nationality = nationality;
-	}
-	/**
-	 * возвращение параметра
-	 * @return код страны, выдавшей паспорт
-	 */
-	public String getCountryCode() {
-		return _countryCode;
-	}
-	/**
-	 * установка параметра
-	 * @param countryCode - код страны, выдавшей паспорт
-	 */
-	public void setCountryCode(String countryCode) {
-		_countryCode = countryCode;
-	}
-	/**
-	 * возвращение параметра
-	 * @return запись в реестре
-	 */
-	public String getRecordNo() {
-		return _recordNo;
-	}
-	/**
-	 * установка параметра
-	 * @param recordNo - запись в реестре
-	 */
-	public void setRecordNo(String recordNo) {
-		_recordNo = recordNo;
-	}
-	/**
-	 * возвращение параметра
-	 * @return организация, выдавшая паспорт
-	 */
-	public String getAuthority() {
-		return _authority;
-	}
-	/**
-	 * установка параметра
-	 * @param authority - организация, выдавшая паспорт
-	 */
-	public void setAuthority(String authority) {
-		_authority = authority;
-	}
+
+		
 }

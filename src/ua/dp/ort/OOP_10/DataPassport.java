@@ -1,17 +1,17 @@
 package ua.dp.ort.OOP_10;
 
 /**
- * Данный интерфейс - массивы данных паспортов
- * (для иллюстрации массивы из двух элементов) 
- * @author Admin
+ * This interface - data arrays passports and foreign passports
+ * (Array for illustration of two elements)
+ *  @author Admin
  *
  */
 public interface DataPassport {
 	
 	/**
-	 * массив данных гражданских паспортов из двух элементов
-	 * с проверкой двух конструкторов класса Passport
-	 * @return - массив класса Passport
+	 * data of passports array of two elements
+	 * with checking two class constructors
+	 * @return - array of class Passport 
 	 */
 	public static Passport[] setDataPassport() {
 		Passport[] passports = new Passport[2];
@@ -38,39 +38,48 @@ public interface DataPassport {
 	}
 	
 	/**
-	 * массив данных загранпаспортов из двух элементов
-	 * с проверкой двух конструкторов класса ForeignPassport
-	 * @return - массив класса ForeignPassport
+	 * data of foreign passports array of two elements
+	 * with checking two class constructors
+	 * @return - array of class ForeignPassport
 	 */
 	public static ForeignPassport[] setDataForeignPassport() {
 		ForeignPassport[] foreignPassports = new ForeignPassport[2];
-		Visa IvanovIIV = new Visa(
-				"шенген", 
-				"рабочая", 
-				"многократная", 
-				"10.07.2016", 
-				"10.07.2017");
-		Visa SidorovSSV = new Visa();
-		SidorovSSV.setTypeUnion("шенген");
-		SidorovSSV.setTypePurpose("туристическая");
-		SidorovSSV.setTypeAction("однократная");
-		SidorovSSV.setDataOpen("01.07.2016");
-		SidorovSSV.setDataClose("01.08.2016");
-		ForeignPassport IvanovIIFP = new ForeignPassport(
+		
+		Passport IvanovIIPP = new Passport(
 				"ІВАНОВ/IVANOV", 
 				"ІВАН/IVAN", 
 				"ІВАНОВИЧ/IVANOVICH", 
 				"05ТРА/MAY00", 
 				"УКРАЇНА", 
 				"FK232323", 
-				"30ТРА/MAY16", 
-				IvanovIIV, 
+				"30ТРА/MAY16");
+		Visa IvanovIIV = new Visa(
+				"шенген", 
+				"рабочая", 
+				"многократная", 
+				"10.07.2016", 
+				"10.07.2017");
+		ForeignPassportForei IvanovIIFPF = new ForeignPassportForei(
 				"30ТРА/MAY26", 
 				"УКРАЇНА/UKRAINE", 
 				"UKR", 
 				"01234567-01234", 
 				"1201");
+		
+		ForeignPassport IvanovIIFP = new ForeignPassport(
+				IvanovIIPP, 
+				IvanovIIV, 
+				IvanovIIFPF);
+				
 		foreignPassports[0] = IvanovIIFP;
+		
+		Visa SidorovSSV = new Visa();
+		SidorovSSV.setTypeUnion("шенген");
+		SidorovSSV.setTypePurpose("туристическая");
+		SidorovSSV.setTypeAction("однократная");
+		SidorovSSV.setDataOpen("01.07.2016");
+		SidorovSSV.setDataClose("01.08.2016");
+		
 		ForeignPassport SidorovSSFP = new ForeignPassport();
 		SidorovSSFP.setSurname("СІДОРОВ/SIDOROV");
 		SidorovSSFP.setName("СІДОР/SIDOR");
@@ -80,11 +89,15 @@ public interface DataPassport {
 		SidorovSSFP.setNumberPassport("FE121212");
 		SidorovSSFP.setDateOfIssue("25ТРА/MAY16");
 		SidorovSSFP.setVisaData(SidorovSSV);
-		SidorovSSFP.setDateOfExpiry("25ТРА/MAY26");
-		SidorovSSFP.setNationality("УКРАЇНА/UKRAINE");
-		SidorovSSFP.setCountryCode("UKR");
-		SidorovSSFP.setRecordNo("12345678-12345");
-		SidorovSSFP.setAuthority("1201");
+		
+		ForeignPassportForei SidorovSSFPF = new ForeignPassportForei();
+		SidorovSSFP.setForeignPassportForei(SidorovSSFPF);
+		SidorovSSFPF.setDateOfExpiry("25ТРА/MAY26");
+		SidorovSSFPF.setNationality("УКРАЇНА/UKRAINE");
+		SidorovSSFPF.setCountryCode("UKR");
+		SidorovSSFPF.setRecordNo("12345678-12345");
+		SidorovSSFPF.setAuthority("1201");
+		
 		foreignPassports[1] = SidorovSSFP;
 		return foreignPassports;
 	}

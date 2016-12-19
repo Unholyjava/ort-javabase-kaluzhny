@@ -1,7 +1,7 @@
 package ua.dp.ort.OOP_10;
 
 /**
- * Класс представляет собой параметры визы
+ * This class is a visa's parameters
  * @author Admin
  *
  */
@@ -13,18 +13,19 @@ public class Visa {
 	private String _dataClose;
 	
 	/**
-	 * инициализация класса без параметров
+	 * constructor without parameters
 	 */
 	public Visa() {
 	}
 	
 	/**
-	 * инициализация класса с параметрами
-	 * @param typeUnion - тип визы содружеств (например, шенгенская)
-	 * @param typePurpose - тип визы по назначению (рабочая, туристическая)
-	 * @param typeAction - тип визы по длительности (одно-, многократные)
-	 * @param dataOpen - дата открытия визы
-	 * @param dataClose - дата закрытия визы
+	 * constructor with parameters
+	 * @param typeUnion - commonwealths type of visa (for example, the Schengen)
+	 * @param typePurpose - type of visa for the purpose (work, travel)
+	 * @param typeAction - type of visa for the duration 
+	 *  (single-entry, multiple-entry)
+	 * @param dataOpen - visa opening date
+	 * @param dataClose - visa closing date
 	 */
 	public Visa(String typeUnion, 
 			String typePurpose,
@@ -38,71 +39,71 @@ public class Visa {
 		setDataClose(dataClose);
 	}
 	/**
-	 * возвращение параметра
-	 * @return тип визы содружеств
+	 * Getter
+	 * @return - commonwealths type of visa
 	 */
 	public String getTypeUnion() {
 		return _typeUnion;
 	}
 	/**
-	 * установка параметра
-	 * @param typeUnion - тип визы содружеств
+	 * Setter
+	 * @param set commonwealths type of visa
 	 */
 	public void setTypeUnion(String typeUnion) {
 		_typeUnion = typeUnion;
 	}
 	/**
-	 * возвращение параметра
-	 * @return тип визы по назначению
+	 * Getter
+	 * @return - type of visa for the purpose
 	 */
 	public String getTypePurpose() {
 		return _typePurpose;
 	}
 	/**
-	 * установка параметра
-	 * @param typePurpose - тип визы по назначению
+	 * Setter
+	 * @param set type of visa for the purpose
 	 */
 	public void setTypePurpose(String typePurpose) {
 		_typePurpose = typePurpose;
 	}
 	/**
-	 * возвращение параметра
-	 * @return тип визы по длительности
+	 * Getter
+	 * @return - type of visa for the duration
 	 */
 	public String getTypeAction() {
 		return _typeAction;
 	}
 	/**
-	 * установка параметра
-	 * @param typeAction - тип визы по длительности
+	 * Setter
+	 * @param set type of visa for the duration
 	 */
 	public void setTypeAction(String typeAction) {
 		_typeAction = typeAction;
 	}
 	/**
-	 * возвращение параметра
-	 * @return дата открытия визы
+	 * Getter
+	 * @return - visa opening date
 	 */
 	public String getDataOpen() {
 		return _dataOpen;
 	}
 	/**
-	 * установка параметра
-	 * @param dataOpen - дата открытия визы
+	 * Setter
+	 * @param set visa opening date
 	 */
 	public void setDataOpen(String dataOpen) {
 		_dataOpen = dataOpen;
 	}
 	/**
-	 * возвращение параметра
-	 * @return дата закрытия визы
+	 * Getter
+	 * @return - visa closing date
 	 */
 	public String getDataClose() {
 		return _dataClose;
 	}
 	/**
-	 * установка параметра
-	 * @param dataClose - дата закрытия визы
+	 * Setter
+	 * @param set visa closing date
 	 */
 	public void setDataClose(String dataClose) {
 		_dataClose = dataClose;
