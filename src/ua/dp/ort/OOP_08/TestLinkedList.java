@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 /**
  * Class for testing methods of class SinglyLinkedList:
+ * - add elements in head and in tail;
+ * - remove element;
+ * - check contains element in list;
+ * - remove all elements;
+ * - get counter.
  * @author Admin
  *
  */

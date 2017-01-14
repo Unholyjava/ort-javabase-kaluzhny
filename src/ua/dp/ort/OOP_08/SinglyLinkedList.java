@@ -36,13 +36,13 @@ public class SinglyLinkedList {
 	 */
 	public void addToHead (int value) {
 		LinkedListNode element = new LinkedListNode(value);
-		if (_headElement == null) {
-			_headElement = element;
-			_tailElement = element;
+		if (getHeadElement() == null) {
+			setHeadElement(element);
+			setTailElement(element);
 		} else {
 			
-			element.setNextElement(_headElement);
-			_headElement = element;
+			element.setNextElement(getHeadElement());
+			setHeadElement(element);
 		}
 		++_counter;
 	}
@@ -127,7 +127,7 @@ public class SinglyLinkedList {
 	
 	
 	/**
-	 * Getter
+	 * Getter for field _counter
 	 * @return - quantity of elements in list
 	 */
 	public int getCounter() {

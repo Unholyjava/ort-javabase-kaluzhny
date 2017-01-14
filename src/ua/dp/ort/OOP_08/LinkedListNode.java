@@ -20,7 +20,7 @@ public class LinkedListNode {
 	}
 
 	/**
-	 * Getter
+	 * Getter for field _valueElement
 	 * @return - data of list's element
 	 */
 	public int getValueElement() {
@@ -28,7 +28,7 @@ public class LinkedListNode {
 	}
 
 	/**
-	 * Setter
+	 * Setter for field _valueElement
 	 * @param set data of list's element
 	 */
 	public void setValueElement(int value) {
@@ -36,7 +36,7 @@ public class LinkedListNode {
 	}
 
 	/**
-	 * Getter
+	 * Getter for field _nextElement
 	 * @return - pointer to the next element
 	 */
 	public LinkedListNode getNextElement() {
@@ -44,7 +44,7 @@ public class LinkedListNode {
 	}
 
 	/**
-	 * Setter
+	 * Setter for field _nextElement
 	 * @param set pointer to the next element
 	 */
 	public void setNextElement(LinkedListNode nextElement) {
