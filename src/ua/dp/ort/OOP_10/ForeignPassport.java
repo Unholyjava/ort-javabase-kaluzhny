@@ -11,9 +11,7 @@ public class ForeignPassport extends Passport {
 	private Visa _visaData;
 	private ForeignPassportForei _foreignPassportForei;
 		
-	/**
-	 * constructor without parameters
-	 */
+	
 	public ForeignPassport() {
 	}
 	
@@ -37,14 +35,14 @@ public class ForeignPassport extends Passport {
 	}
 	
 	/**
-	 * Getter
+	 * Getter for field _visaData (variable of class Visa)
 	 * @return data of visa
 	 */
 	public Visa getVisaData() {
 		return _visaData;
 	}
 	/**
-	 * Setter
+	 * Setter for field _visaData (variable of class Visa)
 	 * @param visaData - set data of visa
 	 */
 	public void setVisaData(Visa visaData) {
@@ -52,7 +50,7 @@ public class ForeignPassport extends Passport {
 	}
 
 	/**
-	 * Getter
+	 * Getter for field _foreignPassportForei (variable of class ForeignPassportForei)
 	 * @return - other data of foreign passport
 	 */
 	public ForeignPassportForei getForeignPassportForei() {
@@ -60,7 +58,7 @@ public class ForeignPassport extends Passport {
 	}
 
 	/**
-	 * Setter
+	 * Setter for field _foreignPassportForei (variable of class ForeignPassportForei)
 	 * @param set other data of foreign passport
 	 */
 	public void setForeignPassportForei(ForeignPassportForei foreignPassportForei) {

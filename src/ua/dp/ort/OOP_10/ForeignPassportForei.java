@@ -13,9 +13,7 @@ public class ForeignPassportForei {
 	private String _recordNo;
 	private String _authority;
 	
-	/**
-	 * constructor without parameters
-	 */
+	
 	public ForeignPassportForei() {
 	}
 	
@@ -42,70 +40,70 @@ public class ForeignPassportForei {
 	}
 	
 	/**
-	 * Getter
+	 * Getter for field _dateOfExpiry
 	 * @return - expiration date of foreign passport
 	 */
 	public String getDateOfExpiry() {
 		return _dateOfExpiry;
 	}
 	/**
-	 * Setter
+	 * Setter for field _dateOfExpiry
 	 * @param set expiration date of foreign passport
 	 */
 	public void setDateOfExpiry(String dateOfExpiry) {
 		_dateOfExpiry = dateOfExpiry;
 	}
 	/**
-	 * Getter
+	 * Getter for field _nationality
 	 * @return - holder's nationality
 	 */
 	public String getNationality() {
 		return _nationality;
 	}
 	/**
-	 * Setter
+	 * Setter for field _nationality
 	 * @param set holder's nationality
 	 */
 	public void setNationality(String nationality) {
 		_nationality = nationality;
 	}
 	/**
-	 * Getter
+	 * Getter for field _countryCode
 	 * @return - code of the country issuing the foreign passport
 	 */
 	public String getCountryCode() {
 		return _countryCode;
 	}
 	/**
-	 * Setter
+	 * Setter for field _countryCode
 	 * @param set code of the country issuing the foreign passport
 	 */
 	public void setCountryCode(String countryCode) {
 		_countryCode = countryCode;
 	}
 	/**
-	 * Getter
+	 * Getter for field _recordNo
 	 * @return - registry entry
 	 */
 	public String getRecordNo() {
 		return _recordNo;
 	}
 	/**
-	 * Setter
+	 * Setter for field _recordNo
 	 * @param set registry entry
 	 */
 	public void setRecordNo(String recordNo) {
 		_recordNo = recordNo;
 	}
 	/**
-	 * Getter
+	 * Getter for field _authority
 	 * @return - organization that issued the passport
 	 */
 	public String getAuthority() {
 		return _authority;
 	}
 	/**
-	 * Setter
+	 * Setter for field _authority
 	 * @param set organization that issued the passport
 	 */
 	public void setAuthority(String authority) {

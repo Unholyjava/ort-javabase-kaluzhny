@@ -12,9 +12,7 @@ public class Visa {
 	private String _dataOpen;
 	private String _dataClose;
 	
-	/**
-	 * constructor without parameters
-	 */
+	
 	public Visa() {
 	}
 	
@@ -39,70 +37,70 @@ public class Visa {
 		setDataClose(dataClose);
 	}
 	/**
-	 * Getter
+	 * Getter for field _typeUnion
 	 * @return - commonwealths type of visa
 	 */
 	public String getTypeUnion() {
 		return _typeUnion;
 	}
 	/**
-	 * Setter
+	 * Setter for field _typeUnion
 	 * @param set commonwealths type of visa
 	 */
 	public void setTypeUnion(String typeUnion) {
 		_typeUnion = typeUnion;
 	}
 	/**
-	 * Getter
+	 * Getter for field _typePurpose
 	 * @return - type of visa for the purpose
 	 */
 	public String getTypePurpose() {
 		return _typePurpose;
 	}
 	/**
-	 * Setter
+	 * Setter for field _typePurpose
 	 * @param set type of visa for the purpose
 	 */
 	public void setTypePurpose(String typePurpose) {
 		_typePurpose = typePurpose;
 	}
 	/**
-	 * Getter
+	 * Getter for field _typeAction
 	 * @return - type of visa for the duration
 	 */
 	public String getTypeAction() {
 		return _typeAction;
 	}
 	/**
-	 * Setter
+	 * Setter for field _typeAction
 	 * @param set type of visa for the duration
 	 */
 	public void setTypeAction(String typeAction) {
 		_typeAction = typeAction;
 	}
 	/**
-	 * Getter
+	 * Getter for field _dataOpen
 	 * @return - visa opening date
 	 */
 	public String getDataOpen() {
 		return _dataOpen;
 	}
 	/**
-	 * Setter
+	 * Setter for field _dataOpen
 	 * @param set visa opening date
 	 */
 	public void setDataOpen(String dataOpen) {
 		_dataOpen = dataOpen;
 	}
 	/**
-	 * Getter
+	 * Getter for field _dataClose
 	 * @return - visa closing date
 	 */
 	public String getDataClose() {
 		return _dataClose;
 	}
 	/**
-	 * Setter
+	 * Setter for field _dataClose
 	 * @param set visa closing date
 	 */
 	public void setDataClose(String dataClose) {
