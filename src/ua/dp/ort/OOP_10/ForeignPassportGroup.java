@@ -6,7 +6,7 @@ package ua.dp.ort.OOP_10;
  * @author Admin
  *
  */
-public class ForeignPassportForei {
+public class ForeignPassportGroup {
 	private String _dateOfExpiry;
 	private String _nationality;
 	private String _countryCode;
@@ -14,7 +14,7 @@ public class ForeignPassportForei {
 	private String _authority;
 	
 	
-	public ForeignPassportForei() {
+	public ForeignPassportGroup() {
 	}
 	
 	/**
@@ -25,7 +25,7 @@ public class ForeignPassportForei {
 	 * @param recordNo - registry entry
 	 * @param authority - organization that issued the passport
 	 */
-	public ForeignPassportForei(
+	public ForeignPassportGroup(
 			String dateOfExpiry,
 			String nationality,
 			String countryCode,

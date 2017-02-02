@@ -59,7 +59,7 @@ public interface DataPassport {
 				"многократная", 
 				"10.07.2016", 
 				"10.07.2017");
-		ForeignPassportForei IvanovIIFPF = new ForeignPassportForei(
+		ForeignPassportGroup IvanovIIFPF = new ForeignPassportGroup(
 				"30ТРА/MAY26", 
 				"УКРАЇНА/UKRAINE", 
 				"UKR", 
@@ -90,8 +90,8 @@ public interface DataPassport {
 		SidorovSSFP.setDateOfIssue("25ТРА/MAY16");
 		SidorovSSFP.setVisaData(SidorovSSV);
 		
-		ForeignPassportForei SidorovSSFPF = new ForeignPassportForei();
-		SidorovSSFP.setForeignPassportForei(SidorovSSFPF);
+		ForeignPassportGroup SidorovSSFPF = new ForeignPassportGroup();
+		SidorovSSFP.setForeignPassportGroup(SidorovSSFPF);
 		SidorovSSFPF.setDateOfExpiry("25ТРА/MAY26");
 		SidorovSSFPF.setNationality("УКРАЇНА/UKRAINE");
 		SidorovSSFPF.setCountryCode("UKR");

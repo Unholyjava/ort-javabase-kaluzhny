@@ -9,7 +9,7 @@ package ua.dp.ort.OOP_10;
  */
 public class ForeignPassport extends Passport {
 	private Visa _visaData;
-	private ForeignPassportForei _foreignPassportForei;
+	private ForeignPassportGroup _foreignPassportGroup;
 		
 	
 	public ForeignPassport() {
@@ -19,18 +19,18 @@ public class ForeignPassport extends Passport {
 	 * constructor with parameters
 	 * @param passport - data of passport
 	 * @param visaData - data of visa
-	 * @param foreignPassportForei - other data of foreign passport
+	 * @param foreignPassportGroup - other data of foreign passport
 	 */
 	public ForeignPassport(
 		Passport passport,
 		Visa visaData,
-		ForeignPassportForei foreignPassportForei) {
+		ForeignPassportGroup foreignPassportGroup) {
 		super(passport.getSurname(), passport.getName(), 
 			passport.getPatronymic(), passport.getDateOfBirth(), 
 			passport.getPlaceOfBirth(), passport.getNumberPassport(), 
 			passport.getDateOfIssue());
 		setVisaData(visaData);
-		setForeignPassportForei(foreignPassportForei);
+		setForeignPassportGroup(foreignPassportGroup);
 		
 	}
 	
@@ -53,16 +53,16 @@ public class ForeignPassport extends Passport {
 	 * Getter for field _foreignPassportForei (variable of class ForeignPassportForei)
 	 * @return - other data of foreign passport
 	 */
-	public ForeignPassportForei getForeignPassportForei() {
-		return _foreignPassportForei;
+	public ForeignPassportGroup getForeignPassportGroup() {
+		return _foreignPassportGroup;
 	}
 
 	/**
 	 * Setter for field _foreignPassportForei (variable of class ForeignPassportForei)
 	 * @param set other data of foreign passport
 	 */
-	public void setForeignPassportForei(ForeignPassportForei foreignPassportForei) {
-		_foreignPassportForei = foreignPassportForei;
+	public void setForeignPassportGroup(ForeignPassportGroup foreignPassportForei) {
+		_foreignPassportGroup = foreignPassportForei;
 	}
 
 		

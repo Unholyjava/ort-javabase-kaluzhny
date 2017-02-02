@@ -61,14 +61,14 @@ public class Main {
 		
 		StringBuilder sbForeignPassport = new StringBuilder();
 		sbForeignPassport.append("Срок действия: ")
-			.append(object.getForeignPassportForei().getDateOfExpiry()).append("\n")
-			.append("Гражданство: ").append(object.getForeignPassportForei()
+			.append(object.getForeignPassportGroup().getDateOfExpiry()).append("\n")
+			.append("Гражданство: ").append(object.getForeignPassportGroup()
 				.getNationality()).append("\n")
-			.append("Код страны: ").append(object.getForeignPassportForei()
+			.append("Код страны: ").append(object.getForeignPassportGroup()
 				.getCountryCode()).append("\n")
-			.append("Запись в реестре: ").append(object.getForeignPassportForei()
+			.append("Запись в реестре: ").append(object.getForeignPassportGroup()
 				.getRecordNo()).append("\n")
-			.append("Организация, выдавшая паспорт: ").append(object.getForeignPassportForei()
+			.append("Организация, выдавшая паспорт: ").append(object.getForeignPassportGroup()
 				.getAuthority()).append("\n");
 		
 		StringBuilder sb = new StringBuilder();
