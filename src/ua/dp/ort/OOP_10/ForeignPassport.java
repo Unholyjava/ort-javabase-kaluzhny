@@ -50,7 +50,7 @@ public class ForeignPassport extends Passport {
 	}
 
 	/**
-	 * Getter for field _foreignPassportForei (variable of class ForeignPassportForei)
+	 * Getter for field _foreignPassportGroup (variable of class ForeignPassportGroup)
 	 * @return - other data of foreign passport
 	 */
 	public ForeignPassportGroup getForeignPassportGroup() {
@@ -58,11 +58,11 @@ public class ForeignPassport extends Passport {
 	}
 
 	/**
-	 * Setter for field _foreignPassportForei (variable of class ForeignPassportForei)
+	 * Setter for field _foreignPassportGroup (variable of class ForeignPassportGroup)
 	 * @param set other data of foreign passport
 	 */
-	public void setForeignPassportGroup(ForeignPassportGroup foreignPassportForei) {
-		_foreignPassportGroup = foreignPassportForei;
+	public void setForeignPassportGroup(ForeignPassportGroup foreignPassportGroup) {
+		_foreignPassportGroup = foreignPassportGroup;
 	}
 
 		
