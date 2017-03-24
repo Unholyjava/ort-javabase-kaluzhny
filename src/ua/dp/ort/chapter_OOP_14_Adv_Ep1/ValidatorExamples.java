@@ -16,23 +16,9 @@ public class ValidatorExamples {
 	private static boolean _allValidator;
 	private boolean _valueValidator;
 	private boolean _formatValidator;
-	private boolean _division0;
+	private boolean _divisionByZero;
 	
 	public ValidatorExamples() {
-	}
-	
-	/**
-	 * Constructor with parameters String example - user's input arithmetic expression
-	 * @param example
-	 */
-	public ValidatorExamples(String example) {
-	}
-	
-	/**
-	 * Constructor with parameters double value - converted arithmetic operands
-	 * @param value
-	 */
-	public ValidatorExamples(double value) {
 	}
 	
 	/**
@@ -42,7 +28,7 @@ public class ValidatorExamples {
 	 * @return - true, if expression complies with the rules
 	 */
 	public boolean validatorFormat(String example){  
-		Pattern p = Pattern.compile("^(\\d(\\.\\d{0,3})?[-\\+\\*\\/])+\\d(\\.\\d{0,3})?$");
+		Pattern p = Pattern.compile("^(\\d{1,}(\\.\\d{0,3})?[-\\+\\*\\/])+\\d{1,}(\\.\\d{0,3})?$");
 		Matcher m = p.matcher(example);  
 		setFormatValidator(m.matches());
 		return getFormatValidator(); 
@@ -53,11 +39,11 @@ public class ValidatorExamples {
 	 * @param example - String-arithmetic expression
 	 * @return - true, if no use division by zero
 	 */
-	public boolean validatorDivision0(String example) {
+	public boolean validatorDivisionByZero(String example) {
 		Pattern p = Pattern.compile(".+\\/0.?+");
 		Matcher m = p.matcher(example);  
-		setDivision0(!m.matches());
-		return getDivision0(); 
+		setDivisionByZero(!m.matches());
+		return getDivisionByZero(); 
 	}
 	
 	/**
@@ -83,12 +69,12 @@ public class ValidatorExamples {
 	 * Getter-method, return field, indicating division by zero 
 	 * @return _division0
 	 */
-	public boolean getDivision0() {
-		return _division0;
+	public boolean getDivisionByZero() {
+		return _divisionByZero;
 	}
 	
-	private void setDivision0(boolean division0) {
-		_division0 = division0;
+	private void setDivisionByZero(boolean divisionByZero) {
+		_divisionByZero = divisionByZero;
 	}
 	
 	/**

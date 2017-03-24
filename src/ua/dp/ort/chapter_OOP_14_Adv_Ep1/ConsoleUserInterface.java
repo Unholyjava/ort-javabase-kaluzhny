@@ -76,12 +76,12 @@ public class ConsoleUserInterface implements UserInterface{
 					throw new CalculatorException("Один или более операндов "
 							+ "выходят за пределы допустимых значений");
 			}
-			if (!validator.validatorDivision0(example)) {
+			if (!validator.validatorDivisionByZero(example)) {
 				throw new CalculatorException("В выражении содержится "
 						+ "деление на 0");
 			}
 			ValidatorExamples.setAllValidator(true);
-			setCalculatorService(new SimpleCalculatorService(example));
+			setCalculatorService(new SimpleCalculatorService());
 			setResult(getCalculatorService().evaluate(example));
 			setExample(example);
 	}

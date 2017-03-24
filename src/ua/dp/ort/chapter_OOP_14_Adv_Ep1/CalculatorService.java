@@ -7,5 +7,5 @@ package ua.dp.ort.chapter_OOP_14_Adv_Ep1;
  *
  */
 public interface CalculatorService {
-	public double evaluate(String example);
+	public double evaluate(String example) throws CalculatorException;
 }

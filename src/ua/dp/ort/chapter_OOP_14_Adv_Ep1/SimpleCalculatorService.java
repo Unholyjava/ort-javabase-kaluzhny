@@ -1,6 +1,7 @@
 package ua.dp.ort.chapter_OOP_14_Adv_Ep1;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Class SimpleCalculatorService is converts user's String arithmetic expression
@@ -16,18 +17,6 @@ import java.util.LinkedList;
  */
 public class SimpleCalculatorService implements CalculatorService{
 
-	
-	
-	public SimpleCalculatorService() {
-	}
-	
-	/**
-	 * Constructor with parameters - user's String arithmetic expression
-	 * @param example
-	 */
-	public SimpleCalculatorService(String example) {
-	}
-	
 	@Override
 	/**
 	 * This method splits user's String arithmetic expression to operands and operators,
@@ -36,7 +25,7 @@ public class SimpleCalculatorService implements CalculatorService{
 	 */
 	public double evaluate(String example) {
 		String[] numbers = example.split("[-\\+\\*\\/]");
-		String[] operators = example.split("\\d(\\.\\d{0,3})?");
+		String[] operators = example.split("\\d{1,}(\\.\\d{0,3})?");
 		
 		Double result = stringToResult(numbers, operators);
 		return result;
@@ -50,9 +39,9 @@ public class SimpleCalculatorService implements CalculatorService{
         }
     }
 	
-	private void MathOperationDo(LinkedList<Double> bufferNumbers, String oper) {
-		double operandOne = bufferNumbers.removeLast();
-        double operandTwo = bufferNumbers.removeLast();
+	private void mathOperationDo(List<Double> bufferNumbers, String oper) {
+		double operandOne = ((LinkedList<Double>) bufferNumbers).removeLast();
+        double operandTwo = ((LinkedList<Double>) bufferNumbers).removeLast();
         switch(oper) {
             case "+":
                 bufferNumbers.add(operandTwo + operandOne);
@@ -67,8 +56,16 @@ public class SimpleCalculatorService implements CalculatorService{
                 bufferNumbers.add(operandTwo / operandOne);
                 break;
             default:
-                System.err.println("Неведомая ошибка");
+			try {
+				throw new CalculatorException
+                	("В арифметическом выражении имеются недопустимые символы операций,"
+                			+ "Для разработчиков: регулярные выражения не корректны");
+			} catch (CalculatorException e) {
+				e.printStackTrace();
+			}
+           
         }
+            
     }
 	
 	/**
@@ -78,14 +75,14 @@ public class SimpleCalculatorService implements CalculatorService{
 	 * @param operators - operator's array
 	 * @return
 	 */
-	public double stringToResult(String[] numbers, String[] operators) {
+	private double stringToResult(String[] numbers, String[] operators) {
 		LinkedList<Double> numbersList = new LinkedList<>();
         LinkedList<String> operatorsList = new LinkedList<>();
         
         for(int i = 0; i < numbers.length; i++) {
         	while(!operatorsList.isEmpty() && 
                 priorityOperations(operatorsList.getLast()) >= priorityOperations(operators[i])) {
-                     MathOperationDo(numbersList, operatorsList.removeLast());
+                     mathOperationDo(numbersList, operatorsList.removeLast());
             }
             if (i != 0) {
             	operatorsList.add(operators[i]);
@@ -93,7 +90,7 @@ public class SimpleCalculatorService implements CalculatorService{
             numbersList.add(Double.parseDouble(numbers[i]));
         }
         while(!operatorsList.isEmpty()) {
-        	MathOperationDo(numbersList, operatorsList.removeLast());
+        	mathOperationDo(numbersList, operatorsList.removeLast());
         }
         return numbersList.get(0);
     }

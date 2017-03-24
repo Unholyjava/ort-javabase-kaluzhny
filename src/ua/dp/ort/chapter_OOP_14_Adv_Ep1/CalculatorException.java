@@ -1,10 +1,10 @@
 package ua.dp.ort.chapter_OOP_14_Adv_Ep1;
 
+/**
+ * This class is for print out own messages when error action
+ */
 public class CalculatorException extends Exception {
 	
-	/**
-	 * This class is for print out own messages when error action
-	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
